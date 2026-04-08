@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melanie & Harintsoa — Mariage / Hochzeit</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="lang-fr">
+
+  <div class="bg-decoration"></div>
+
+  <!-- ════════════════════════════
+       BANDEAU INVITÉ / GÄSTEBANNER
+  ════════════════════════════ -->
+  <div id="guest-banner" style="display:none;position:fixed;top:0;left:0;right:0;z-index:2000;
+    background:linear-gradient(90deg,#b85c65,#c9928a);color:white;text-align:center;
+    padding:11px 20px;font-family:'Cinzel Decorative',cursive;font-size:0.55rem;
+    letter-spacing:0.22em;text-transform:uppercase;
+    box-shadow:0 2px 16px rgba(140,50,60,0.22);">
+  </div>
+
+  <!-- ════════════════════════════
+       SÉLECTEUR DE LANGUE / SPRACHAUSWAHL
+  ════════════════════════════ -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('fr')">🇫🇷 FR</button>
+    <button class="lang-btn"        onclick="setLang('de')">🇩🇪 DE</button>
+  </div>
+
+  <div class="wrapper">
+
+    <!-- ════════════════════════════
+         HERO — PHOTO & PRÉSENTATION
+    ════════════════════════════ -->
+    <section class="hero">
+
+      <p class="hero-badge">
+        <span class="fr-text">Invitation au Mariage</span>
+        <span class="de-text">Hochzeitseinladung</span>
+      </p>
+
+      <!-- Photo principale — remplacez par : <img src="votre-photo.jpg" class="hero-photo" alt="Melanie & Harintsoa" /> -->
+      <div class="hero-photo-frame">
+        <img src="couple.jpg" class="hero-photo" alt="Melanie & Harintsoa" />
+      </div>
+
+      <div class="hero-names">
+
+        <h1 class="names-display">
+          Harintsoa <span class="ampersand">&amp;</span> Melanie
+        </h1>
+
+        <p class="hero-subtitle-alt"> Where love crossed every mile to become one. ❤️!</p>
+        <div class="ornament-line"><span>✦</span></div>
+
+        <!-- Sous-titre bilingue toujours visible -->
+        <p class="hero-subtitle">Nous nous marions !</p>
+        <p class="hero-subtitle-alt">Wir heiraten!</p>
+
+        <!-- Texte de présentation FR -->
+        <p class="hero-intro fr-text">
+          C'est avec une joie immense et le cœur rempli d'amour que nous vous
+          convions à partager ce jour si précieux — celui où nos deux vies
+          ne feront plus qu'une, pour toujours.
+        </p>
+
+        <!-- Texte de présentation DE -->
+        <p class="hero-intro de-text">
+          Mit großer Freude und einem Herzen voller Liebe laden wir euch ein,
+          diesen besonderen Tag mit uns zu teilen — den Tag, an dem unsere
+          zwei Leben für immer zu einem werden.
+        </p>
+
+        <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+      </div>
+
+    </section>
+
+
+    <!-- ════════════════════════════
+         COMPTE À REBOURS / COUNTDOWN
+    ════════════════════════════ -->
+    <section class="countdown-section reveal">
+
+      <p class="section-title">
+        <span class="fr-text">save the Date</span>
+        <span class="de-text">Save the Date</span>
+      </p>
+
+      <div class="ornament-line"><span>◆</span></div>
+
+      <!-- Date visible — modifiez selon votre mariage -->
+      <p class="countdown-date-display">
+        <span class="fr-text">Samedi 27 Juin 2026 </span>
+        <span class="de-text">Samstag, 27. Juni 2026 </span>
+      </p>
+
+      <div class="countdown-grid">
+
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-days">--</span>
+          <span class="countdown-label">
+            <span class="fr-text">Jours</span>
+            <span class="de-text">Tage</span>
+          </span>
+        </div>
+
+        <span class="countdown-separator">:</span>
+
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-hours">--</span>
+          <span class="countdown-label">
+            <span class="fr-text">Heures</span>
+            <span class="de-text">Stunden</span>
+          </span>
+        </div>
+
+        <span class="countdown-separator">:</span>
+
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-minutes">--</span>
+          <span class="countdown-label">
+            <span class="fr-text">Minutes</span>
+            <span class="de-text">Minuten</span>
+          </span>
+        </div>
+
+        <span class="countdown-separator">:</span>
+
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-seconds">--</span>
+          <span class="countdown-label">
+            <span class="fr-text">Secondes</span>
+            <span class="de-text">Sekunden</span>
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Séparateur -->
+    <!--div class="section-divider reveal">
+      <span class="divider-ornament">
+        <span class="fr-text">— ✦ Nos Souvenirs · Unsere Erinnerungen ✦ —</span>
+        <span class="de-text">— ✦ Unsere Erinnerungen · Nos Souvenirs ✦ —</span>
+      </span>
+    </div>
+
+
+    <!-- ════════════════════════════
+         GALERIE / BILDERGALERIE
+    ════════════════════════════ 
+    <section class="gallery-section">
+
+      <div class="gallery-title-block reveal">
+        <p class="section-title">
+          <span class="fr-text">Notre histoire en images</span>
+          <span class="de-text">Unsere Geschichte in Bildern</span>
+        </p>
+        <p class="gallery-subtitle fr-text">Des instants qui ont forgé notre amour</p>
+        <p class="gallery-subtitle de-text">Momente, die unsere Liebe geprägt haben</p>
+      </div>
+
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="carousel-item">
+            <img src="photos/1.jpg" alt="Photo N" />
+          </div>
+          <div class="carousel-item">
+            <img src="photos/2.jpg" alt="Photo N" />            
+          </div>
+          <div class="carousel-item">
+            <img src="photos/3.jpg" alt="Photo N" />            
+          </div>
+          <!--div class="carousel-item">
+            <img src="photos/4.jpg" alt="Photo N" />       
+          </div>
+          <div class="carousel-item">
+            <img src="photos/5.jpg" alt="Photo N" />      
+          </div>
+          <div class="carousel-item">
+            <img src="photos/6.jpg" alt="Photo N" />       
+          </div>
+          <div class="carousel-item">
+            <img src="photos/7.jpg" alt="Photo N" />      
+          </div>
+
+        </div>
+      </div>
+    </section-->
+
+
+    <!-- Séparateur -->
+    <div class="section-divider reveal">
+      <span class="divider-ornament">
+        <span class="fr-text">— ◆ Informations pratiques ◆ —</span>
+        <span class="de-text">— ◆ Praktische Informationen ◆ —</span>
+      </span>
+    </div>
+
+
+    <!-- ════════════════════════════
+         INFOS ÉVÉNEMENT / VERANSTALTUNGSINFOS
+    ════════════════════════════ -->
+    <section class="event-section reveal">
+
+      <p class="section-title">
+        <span class="fr-text">Le Jour J</span>
+        <span class="de-text">Der große Tag</span>
+      </p>
+      <div class="ornament-line"><span>✦</span></div>
+
+      <div class="event-cards">
+
+        <div class="event-card">
+          <div class="event-card-icon">📅</div>
+          <p class="event-card-label">
+            <span class="fr-text">Date</span>
+            <span class="de-text">Datum</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text">Samedi<br/>27 Juin 2026</span>
+            <span class="de-text">Samstag<br/>27. Juni 2026</span>
+          </p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-icon">📍</div>
+          <p class="event-card-label">
+            <span class="fr-text">Lieu</span>
+            <span class="de-text">Ort</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text">Mairie <br>150 Bd Claudel<br/>13009 Marseille</span>
+            <span class="de-text">Standesamt <br>150 Bd Claudel<br/>13009 Marseille</span>
+          </p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-icon">🕙</div>
+          <p class="event-card-label">
+            <span class="fr-text">Heure</span>
+            <span class="de-text">Uhrzeit</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text"> <br/>15h00</span>
+            <span class="de-text"> <br/>15:00 Uhr</span>
+          </p>
+        </div>
+
+       
+
+        <div class="event-card">
+          <div class="event-card-icon">📷</div>
+          <p class="event-card-label">
+            <span class="fr-text">photo</span>
+            <span class="de-text">Photo</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text">à partir de<br/>16h30</span>
+            <span class="de-text">ab<br/>16:30 Uhr</span>
+          </p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-icon">🥂</div>
+          <p class="event-card-label">
+            <span class="fr-text">Cocktail</span>
+            <span class="de-text">Cocktailempfang</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text">Adresse à suivre<br/>18h00</span>
+            <span class="de-text">Details zum ort Folgen bald<br/>18:00 Uhr</span>
+          </p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-icon">💃 🕺</div>
+          <p class="event-card-label">
+            <span class="fr-text">Ouverture de danse</span>
+            <span class="de-text">Eröffnung der Tanzfläche</span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text">À partir de<br/>20h00</span>
+            <span class="de-text">Ab<br/>20:00 Uhr</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Séparateur -->
+    <div class="section-divider reveal">
+      <span class="divider-ornament">
+        <span class="fr-text">— ✿ Thème des invités ✿ —</span>
+        <span class="de-text">— ✿ Gästethemen ✿ —</span>
+      </span>
+    </div>
+
+    <!-- THÈMES INVITÉS -->
+    <section class="guest-theme-section reveal">
+
+      <p class="section-title">
+        <span class="fr-text">Tenue souhaitée · Code couleur</span>
+        <span class="de-text">Gewünschte Kleidung · Farbcode</span>
+      </p>
+
+      <p class="guest-theme-intro fr-text">
+        Pour sublimer nos photos, nous vous invitons à choisir une tenue dans les teintes ci-dessous.
+      </p>
+      <p class="guest-theme-intro de-text">
+        Um unsere Fotos zu verschönern, bitten wir euch, ein Outfit in den folgenden Farbtönen zu wählen.
+      </p>
+
+      <!-- ── FILLES / DAMEN ── -->
+      <div class="gender-block">
+
+        <div class="gender-label female">
+          <span class="gender-icon">♀</span>
+          <span class="gender-title fr-text">Dames</span>
+          <span class="gender-title de-text">Damen</span>
+        </div>
+
+        <div class="guest-theme-grid girls-grid">
+
+          <div class="theme-item">
+            <div class="color-box g-blue"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-purple"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-lavender"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-pink"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-yellow"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-blush"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-olive"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box g-sage"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── GARÇONS / HERREN ── -->
+      <div class="gender-block">
+
+        <div class="gender-label male">
+          <span class="gender-icon">♂</span>
+          <span class="gender-title fr-text">Messieurs</span>
+          <span class="gender-title de-text">Herren</span>
+        </div>
+
+        <div class="guest-theme-grid boys-grid">
+
+          <div class="theme-item">
+            <div class="color-box b-taupe"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box b-slate"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box b-navy"></div>
+          </div>
+          <div class="theme-item">
+            <div class="color-box b-ivory"></div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Séparateur -->
+    <div class="section-divider reveal">
+      <span class="divider-ornament">
+        <span class="fr-text">— ✦ Restez connectés ✦ —</span>
+        <span class="de-text">— ✦ Bleiben Sie verbunden ✦ —</span>
+      </span>
+    </div>
+
+      <!-- ════════════════════════════
+         FACEBOOK & ABSENCE
+    ════════════════════════════ -->
+    <section class="social-absence-section reveal">
+
+      <!-- Liens Facebook -->
+      <div class="facebook-links">
+        <a class="fb-link" href="https://www.facebook.com/rakotomaefa.melani" target="_blank" rel="noopener">
+          <span class="fb-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="fr-text">Facebook de Mélanie</span>
+          <span class="de-text">Melanies Facebook</span>
+        </a>
+        <a class="fb-link" href="https://www.facebook.com/harintsoa.rakotomalala.1" target="_blank" rel="noopener">
+          <span class="fb-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="fr-text">Facebook de Harintsoa</span>
+          <span class="de-text">Harintsoas Facebook</span>
+        </a>
+      </div>
+
+      <div class="instagram-links">       
+        <a class="insta-link" href="https://www.instagram.com/santamiora_/" target="_blank" rel="noopener">
+          <span class="insta-icon"><i class="fab fa-instagram"></i></span>
+          <span class="fr-text">Instagram de Melanie</span>
+          <span class="de-text">Melanies Instagram</span>
+        </a>
+        <a class="insta-link" href="https://www.instagram.com/harintsoa_/" target="_blank" rel="noopener">
+          <span class="insta-icon"><i class="fab fa-instagram"></i></span>
+          <span class="fr-text">Instagram de Harintsoa</span>
+          <span class="de-text">Harintsoas Instagram</span>
+        </a>
+      </div>
+
+      <!-- Carte absence -->
+      <div class="absence-card">
+        <p class="absence-title">
+          <span class="fr-text">Vous ne pouvez pas venir ?</span>
+          <span class="de-text">Sie können nicht kommen?</span>
+        </p>
+        <p class="absence-text fr-text">
+          Si vous ne pouvez malheureusement pas être présent·e à nos côtés,
+          merci de nous en informer avant le :
+        </p>
+        <p class="absence-text de-text">
+          Falls Sie leider nicht an unserer Seite sein können,
+          bitten wir Sie, uns bis spätestens zu informieren:
+        </p>
+        
+        <span class="absence-deadline">
+          <span class="fr-text">📅 &nbsp; 30 Mai 2026</span>
+          <span class="de-text">📅 &nbsp; 30. Mai 2026</span>
+        </span>
+      </div>
+
+      
+
+    </section>
+
+    </section>
+
+
+    <!-- ════════════════════════════
+         CLÔTURE / ABSCHLUSS
+    ════════════════════════════ -->
+    <section class="closing-section reveal">
+
+      <div class="ornament-line"><span>✦</span></div>
+
+      <p class="closing-message fr-text">
+        Votre présence à nos côtés sera le plus beau des cadeaux.<br />
+        Nous avons hâte de partager ce moment magique avec vous,
+        ceux que nous aimons.
+      </p>
+
+      <p class="closing-message de-text">
+        Eure Anwesenheit an unserer Seite ist das schönste Geschenk.<br />
+        Wir freuen uns darauf, diesen magischen Moment mit euch,
+        unseren Liebsten, zu teilen.
+      </p>
+
+      <p class="closing-names">Harintsoa &amp; Melanie</p>
+
+      <p class="closing-tagline">
+        <span class="fr-text">Pour la vie · Amour &amp; Bonheur</span>
+        <span class="de-text">Für immer · Liebe &amp; Glück</span>
+      </p>
+
+      <!-- 👇 Ajoutez ceci -->
+      <div class="bouquet-img-wrapper">
+        <img src="photos/bouquet.png" alt="Bouquet de fleurs" class="bouquet-img" />
+      </div>
+
+      <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    </section>
+
+
+    
+
+    
+
+  </div><!-- /wrapper -->
+
+
+  <!-- ════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════ -->
+  <script>
+    // ── LANGUE ──────────────────────────────────────────────────────
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('wedding-lang', lang);
+    }
+
+    // Restaurer la langue choisie
+    const savedLang = localStorage.getItem('wedding-lang');
+    if (savedLang) setLang(savedLang);
+
+
+    // ── COMPTE À REBOURS ─────────────────────────────────────────────
+    // ↓ Modifiez cette date / Ändert dieses Datum
+    const WEDDING_DATE = new Date('2026-06-27T15:00:00');
+
+    function updateCountdown() {
+      const diff = WEDDING_DATE - new Date();
+      if (diff <= 0) {
+        ['days','hours','minutes','seconds'].forEach(id =>
+          document.getElementById('cd-' + id).textContent = '00'
+        );
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000)  / 60000);
+      const s = Math.floor((diff % 60000)    / 1000);
+      document.getElementById('cd-days').textContent    = String(d).padStart(2,'0');
+      document.getElementById('cd-hours').textContent   = String(h).padStart(2,'0');
+      document.getElementById('cd-minutes').textContent = String(m).padStart(2,'0');
+      document.getElementById('cd-seconds').textContent = String(s).padStart(2,'0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+
+    // ── CARROUSEL INFINI ─────────────────────────────────────────────
+    const track = document.getElementById('carousel-track');
+    if (track) {
+      const originals = Array.from(track.children);
+      const count = originals.length;
+
+      // Duplique suffisamment pour remplir n'importe quelle largeur d'écran
+      for (let i = 0; i < 5; i++) {
+        originals.forEach(item => track.appendChild(item.cloneNode(true)));
+      }
+
+      // Calcule la largeur réelle après rendu (images chargées)
+      function startCarousel() {
+        const firstItem = track.children[0];
+        const itemW = firstItem.getBoundingClientRect().width;
+        const gap = 20;
+        const scrollWidth = count * (itemW + gap);
+
+        // Supprime l'ancienne animation CSS et en injecte une précise
+        const style = document.createElement('style');
+        style.id = 'carousel-anim';
+        style.textContent = `
+          @keyframes scrollCarousel {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-${scrollWidth}px); }
+          }
+          .carousel-track { animation: scrollCarousel 35s linear infinite; }
+        `;
+        // Retire l'éventuel ancien style injecté
+        const old = document.getElementById('carousel-anim');
+        if (old) old.remove();
+        document.head.appendChild(style);
+      }
+
+      // Lance après que les images soient chargées (ou au bout de 500ms max)
+      window.addEventListener('load', startCarousel);
+      setTimeout(startCarousel, 500);
+    }
+
+
+
+    // ── SCROLL REVEAL ────────────────────────────────────────────────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+    // ── GESTION INVITÉS — PLACES RÉSERVÉES ──────────────────────────
+    // Liste des invités : { id, name, places }
+    // → Ta sœur ajoute ici, puis git push
+    const GUESTS = [
+      // Exemples — remplacer par les vrais invités :
+      // { id: 'rakoto01', name: 'Famille Rakoto',  places: 4 },
+      // { id: 'dupont02', name: 'Jean & Marie',    places: 2 },
+      // { id: 'schmidt3', name: 'Familie Schmidt', places: 3 },
+    ];
+
+    // Détection du paramètre ?g= dans l'URL
+    (function() {
+      const params  = new URLSearchParams(window.location.search);
+      const guestId = params.get('g');
+      if (!guestId) return;
+
+      const guest = GUESTS.find(g => g.id === guestId);
+      if (!guest) return;
+
+      // Affiche le bandeau
+      const banner = document.getElementById('guest-banner');
+      const n      = guest.places;
+      const plFR   = n > 1 ? n + ' places réservées pour vous 🎊' : '1 place réservée pour vous 🎊';
+      const plDE   = n > 1 ? n + ' Plätze für Sie reserviert 🎊'  : '1 Platz für Sie reserviert 🎊';
+      const lang   = localStorage.getItem('wedding-lang') || 'fr';
+      banner.textContent = lang === 'de' ? plDE : plFR;
+      banner.style.display = 'block';
+
+      // Décale la page pour ne pas masquer le contenu sous le bandeau
+      document.body.style.paddingTop = '44px';
+
+      // Met à jour si on change de langue
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const l = btn.textContent.toLowerCase().includes('fr') ? 'fr' : 'de';
+          banner.textContent = l === 'de' ? plDE : plFR;
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
