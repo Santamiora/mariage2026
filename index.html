@@ -4,13 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melanie & Harintsoa — Mariage / Hochzeit</title>
-  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="lang-fr">
 
   <div class="bg-decoration"></div>
+
+  <!-- Décorations coins floraux -->
+  <svg class="deco-corner deco-corner-tl" width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#c06a1a" stroke-width="1.2" opacity="0.8">
+      <path d="M0,0 Q60,40 0,90"/>
+      <path d="M0,0 Q40,60 90,0"/>
+      <path d="M10,10 Q55,45 10,95"/>
+      <path d="M10,10 Q45,55 95,10"/>
+    </g>
+    <circle cx="30" cy="30" r="6" fill="#c06a1a" opacity="0.5"/>
+    <circle cx="15" cy="55" r="4" fill="#e08030" opacity="0.4"/>
+    <circle cx="55" cy="15" r="4" fill="#e08030" opacity="0.4"/>
+    <text x="42" y="48" font-size="22" opacity="0.55">🌸</text>
+    <text x="8"  y="82" font-size="16" opacity="0.4">✿</text>
+    <text x="72" y="20" font-size="16" opacity="0.4">✿</text>
+  </svg>
+  <svg class="deco-corner deco-corner-br" width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#c06a1a" stroke-width="1.2" opacity="0.8">
+      <path d="M0,0 Q60,40 0,90"/>
+      <path d="M0,0 Q40,60 90,0"/>
+      <path d="M10,10 Q55,45 10,95"/>
+      <path d="M10,10 Q45,55 95,10"/>
+    </g>
+    <circle cx="30" cy="30" r="6" fill="#c06a1a" opacity="0.5"/>
+    <circle cx="15" cy="55" r="4" fill="#e08030" opacity="0.4"/>
+    <circle cx="55" cy="15" r="4" fill="#e08030" opacity="0.4"/>
+    <text x="42" y="48" font-size="22" opacity="0.55">🌸</text>
+    <text x="8"  y="82" font-size="16" opacity="0.4">✿</text>
+    <text x="72" y="20" font-size="16" opacity="0.4">✿</text>
+  </svg>
+
+  <!-- Pétales flottants -->
+  <span class="petal" style="left:5%;  animation-duration:14s; animation-delay:0s;   font-size:1rem;">🌸</span>
+  <span class="petal" style="left:15%; animation-duration:18s; animation-delay:3s;   font-size:0.8rem;">✿</span>
+  <span class="petal" style="left:28%; animation-duration:12s; animation-delay:7s;   font-size:1.2rem;">🌷</span>
+  <span class="petal" style="left:42%; animation-duration:20s; animation-delay:1s;   font-size:0.9rem;">🌸</span>
+  <span class="petal" style="left:58%; animation-duration:16s; animation-delay:5s;   font-size:1.1rem;">✿</span>
+  <span class="petal" style="left:70%; animation-duration:13s; animation-delay:9s;   font-size:0.85rem;">🌷</span>
+  <span class="petal" style="left:83%; animation-duration:17s; animation-delay:2s;   font-size:1rem;">🌸</span>
+  <span class="petal" style="left:92%; animation-duration:15s; animation-delay:6s;   font-size:0.75rem;">✿</span>
+
 
   <!-- ════════════════════════════
        BANDEAU INVITÉ / GÄSTEBANNER
@@ -77,6 +118,13 @@
         <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
       </div>
 
+    
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint">
+        <span>Découvrir</span>
+        <div class="scroll-arrow"></div>
+      </div>
+
     </section>
 
 
@@ -97,6 +145,8 @@
         <span class="fr-text">Samedi 27 Juin 2026 </span>
         <span class="de-text">Samstag, 27. Juni 2026 </span>
       </p>
+
+      
 
       <div class="countdown-grid">
 
@@ -252,12 +302,24 @@
         <div class="event-card">
           <div class="event-card-icon">🕙</div>
           <p class="event-card-label">
-            <span class="fr-text">Heure</span>
-            <span class="de-text">Uhrzeit</span>
+            <span class="fr-text">Heure + Information </span>
+            <span class="de-text">Uhrzeit + Information </span>
           </p>
           <p class="event-card-value">
-            <span class="fr-text"> <br/>15h00</span>
-            <span class="de-text"> <br/>15:00 Uhr</span>
+            <span class="fr-text"> <br/> 15h00 </span>
+            <span class="de-text"> <br/>15:00 Uhr :</span>
+          </p>
+        </div> 
+
+        <div class="event-card">
+          <div class="event-card-icon"> 🗣️ </div>
+          <p class="event-card-label">
+            <span class="fr-text">Information </span>
+            <span class="de-text"> Information </span>
+          </p>
+          <p class="event-card-value">
+            <span class="fr-text"> à propos du stationnement, il ne faut pas se garer dans l´enceinte de la Mairie ni devant le portail <br/> </span>
+            <span class="de-text"> was das Parken betrifft, darf man weder auf dem Gelände des Rathauses noch vor dem Tor Parken<br/></span>
           </p>
         </div>
 
@@ -466,6 +528,10 @@
 
 
 
+
+
+    
+    
     <!-- ════════════════════════════
          CLÔTURE / ABSCHLUSS
     ════════════════════════════ -->
@@ -642,7 +708,141 @@
         });
       });
     })();
+  
+    // ── BOISSONS ─────────────────────────────────────────────────────────
+    const DRINKS_META = [
+      { key:'champagne', emoji:'🥂', fr:'Champagne',    de:'Champagner',  color:'#ff8a65' },
+      { key:'vin_rouge', emoji:'🍷', fr:'Vin Rouge',    de:'Rotwein',     color:'#b71c1c' },
+      { key:'vin_blanc', emoji:'🥃', fr:'Vin Blanc',    de:'Weißwein',    color:'#f9a825' },
+      { key:'biere',     emoji:'🍺', fr:'Bière',        de:'Bier',        color:'#f57f17' },
+      { key:'whisky',    emoji:'🥃', fr:'Whisky',       de:'Whisky',      color:'#8d4004' },
+      { key:'cocktail',  emoji:'🍹', fr:'Cocktail',     de:'Cocktail',    color:'#e91e63' },
+      { key:'jus',       emoji:'🧃', fr:'Jus de fruit', de:'Fruchtsaft',  color:'#33691e' },
+      { key:'eau',       emoji:'💧', fr:'Eau / Soft',   de:'Wasser / Soft',color:'#0288d1'},
+    ];
+
+    // Votes stockés localement (simulation partagée via localStorage)
+    // Votes de base simulés pour donner de la vie aux stats
+    const BASE_VOTES = {
+      champagne:30, vin_rouge:22, vin_blanc:18, biere:14,
+      whisky:10, cocktail:20, jus:16, eau:8
+    };
+
+    function getDrinkVotes() {
+      try {
+        const stored = JSON.parse(localStorage.getItem('wedding-drinks-votes') || 'null');
+        if (stored && typeof stored === 'object') return stored;
+      } catch(e) {}
+      return { ...BASE_VOTES };
+    }
+
+    function saveDrinkVotes(votes) {
+      try { localStorage.setItem('wedding-drinks-votes', JSON.stringify(votes)); } catch(e) {}
+    }
+
+    function hasVoted() {
+      return !!localStorage.getItem('wedding-drinks-voted');
+    }
+
+    function toggleDrink(card) {
+      if (hasVoted()) return;
+      card.classList.toggle('selected');
+      const anySelected = document.querySelectorAll('.drink-card.selected').length > 0;
+      document.getElementById('drinks-submit-btn').disabled = !anySelected;
+    }
+
+    function submitDrinks() {
+      const selected = [...document.querySelectorAll('.drink-card.selected')];
+      if (!selected.length || hasVoted()) return;
+
+      const votes = getDrinkVotes();
+      selected.forEach(card => {
+        const key = card.dataset.drink;
+        if (votes[key] !== undefined) votes[key]++;
+      });
+      saveDrinkVotes(votes);
+      localStorage.setItem('wedding-drinks-voted', '1');
+
+      // Feedback visuel
+      document.getElementById('drinks-submit-btn').disabled = true;
+      const ty = document.getElementById('drinks-thankyou');
+      ty.classList.add('visible');
+
+      // Verrou les cartes
+      document.querySelectorAll('.drink-card').forEach(c => {
+        c.style.cursor = 'default';
+        c.style.pointerEvents = 'none';
+      });
+
+      renderDrinksChart();
+    }
+
+    function renderDrinksChart() {
+      const votes = getDrinkVotes();
+      const total = Object.values(votes).reduce((a,b) => a+b, 0) || 1;
+      const container = document.getElementById('drinks-results');
+      const lang = document.documentElement.lang || 'fr';
+
+      container.innerHTML = '';
+      // Trier par votes décroissants
+      const sorted = [...DRINKS_META].sort((a,b) => (votes[b.key]||0) - (votes[a.key]||0));
+
+      sorted.forEach(d => {
+        const v = votes[d.key] || 0;
+        const pct = Math.round(v / total * 100);
+        const label = lang === 'de' ? d.de : d.fr;
+
+        const row = document.createElement('div');
+        row.className = 'vote-row';
+        row.innerHTML = `
+          <span class="vote-emoji">${d.emoji}</span>
+          <span class="vote-name">${label}</span>
+          <div class="vote-bar-bg">
+            <div class="vote-bar-fill" style="width:0%;background:${d.color}" data-pct="${pct}"></div>
+          </div>
+          <span class="vote-pct">${pct}%</span>
+          <span class="vote-count">${v} voix</span>
+        `;
+        container.appendChild(row);
+      });
+
+      // Anime les barres
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          container.querySelectorAll('.vote-bar-fill').forEach(bar => {
+            bar.style.width = bar.dataset.pct + '%';
+          });
+        });
+      });
+    }
+
+    // Bloquer si déjà voté
+    if (hasVoted()) {
+      document.querySelectorAll('.drink-card').forEach(c => {
+        c.style.cursor = 'default';
+        c.style.pointerEvents = 'none';
+      });
+      document.getElementById('drinks-submit-btn').disabled = true;
+      document.getElementById('drinks-submit-btn').style.display = 'none';
+    }
+
+    // Toujours afficher le graphe
+    renderDrinksChart();
+
+    // Re-render si changement de langue
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setTimeout(renderDrinksChart, 50));
+    });
+
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script src="gs/script.gs"></script>
+
+
 </body>
+</html>
+</body>
+
 </html>
