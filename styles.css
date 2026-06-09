@@ -1099,6 +1099,35 @@ body.lang-de span.de-text { display: inline; }
   .dinatoire-illustration { border-radius: 12px; }
   .dtag { font-size: 0.88rem; padding: 7px 14px; }
   .deco-corner { display: none; }
+
+  /* ── Compte à rebours mobile ── */
+  .countdown-section {
+    padding: 40px 16px;
+  }
+  .countdown-grid {
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+  .countdown-number {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+    min-width: 2ch;
+  }
+  .countdown-separator {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+    padding-top: 2px;
+  }
+  .countdown-label {
+    font-size: 0.38rem;
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+  }
+  .countdown-item {
+    min-width: 0;
+  }
+  .countdown-date-display {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    margin: 12px 0 24px;
+  }
 }
 
 
